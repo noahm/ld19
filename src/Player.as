@@ -1,6 +1,6 @@
 package 
 {
-import flash.geom.Point;
+import net.thegamestudio.Point;
 import net.flashpunk.FP;
 import net.flashpunk.Entity;
 import net.flashpunk.utils.Key;

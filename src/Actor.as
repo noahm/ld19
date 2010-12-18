@@ -1,6 +1,6 @@
 package 
 {
-import flash.geom.Point;
+import net.thegamestudio.Point;
 import net.flashpunk.FP;
 import net.flashpunk.Entity;
 
@@ -39,9 +39,9 @@ public class Actor extends Entity
     s.y += v.y * FP.elapsed;
   }
   
-  public function get position():Point { return s.clone(); }
-  public function get velocity():Point { return v.clone(); }
-  public function get acceleration():Point { return a.clone(); }
+  public function get position():Point { return s.clon(); }
+  public function get velocity():Point { return v.clon(); }
+  public function get acceleration():Point { return a.clon(); }
   
   public function get Enabled():Boolean { return _enabled; }
   

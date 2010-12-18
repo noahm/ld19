@@ -18,8 +18,8 @@ public class Others extends Actor
     graphic_anim.play('Default');
     graphic = graphic_anim;
     layer = GP.LAYER_OTHERS;
-    x = startX;
-    y = startY;
+    s.x = startX;
+    s.y = startY;
   }
   
 }

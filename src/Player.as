@@ -1,7 +1,10 @@
 package 
 {
+import flash.geom.Point;
 import net.flashpunk.FP;
 import net.flashpunk.Entity;
+import net.flashpunk.utils.Key;
+import net.flashpunk.utils.Input;
 import net.flashpunk.graphics.Spritemap;
 
 public class Player extends Actor
@@ -19,10 +22,21 @@ public class Player extends Actor
     graphic_anim.play('Default');
     graphic = graphic_anim;
     layer = GP.LAYER_PLAYER;
-    x = startX;
-    y = startY;
+    s.x = startX;
+    s.y = startY;
   }
   
+  protected override function getInput():void
+  {
+    var movement:Point = new Point;
+    if (Input.check(Key.LEFT)) movement.x--;
+    if (Input.check(Key.RIGHT)) movement.x++;
+    if (Input.check(Key.UP)) movement.y--;
+    if (Input.check(Key.DOWN)) movement.y++;
+    movement.normalize(1);
+    a.x = GP.PLAYER_ACCELERATION * movement.x;
+    a.y = GP.PLAYER_ACCELERATION * movement.y;
+  }
 }
 
 }

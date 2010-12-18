@@ -39,6 +39,10 @@ public class Actor extends Entity
     s.y += v.y * FP.elapsed;
   }
   
+  public function get position():Point { return s.clone(); }
+  public function get velocity():Point { return v.clone(); }
+  public function get acceleration():Point { return a.clone(); }
+  
   public function get Enabled():Boolean { return _enabled; }
   
   public function set Enabled(b:Boolean):void {

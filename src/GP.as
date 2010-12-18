@@ -27,6 +27,15 @@ public class GP
   
   /** How fas the player moves */
   public static const PLAYER_ACCELERATION:int = 6000;
+  
+  /** How close to an Other the player should be */
+  public static const TARGET_DISTANCE:int = 150;
+  
+  /** How forgiving we are about the distance */
+  public static const TARGET_DISTANCE_TOLERANCE:int = 20;
+  
+  public static const GREEN_LINE:uint = 0x4CCCC4;
+  public static const RED_LINE:uint = 0xFF5425;
 }
 
 }
